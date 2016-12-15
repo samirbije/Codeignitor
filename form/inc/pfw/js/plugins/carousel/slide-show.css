@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+#imgArea, #imgArea2 {
+	width: 960px;
+	height: auto;
+	margin: 0 auto 0 auto;
+}
+#imgArea.loading {
+	height: 315px;
+	overflow: hidden;
+}
+#imgArea.loading img, 
+#imgArea2.loading img {
+	display: none;
+	width: 100%;
+}
+
+.no-js #imgArea.loading img {
+	display: block;
+}
+
+#mainimg ul {
+	margin: 25px auto 0 auto;
+	width: 960px;
+	text-align: left;
+}
+
+#mainimg li {
+	float: left;
+	margin: 0 11px 10px 0;
+}
+
+#mainimg li.last-cont {
+	margin-right: 0px;
+}
+
+
+#mainimg a, #mainimg a {
+	width: 100%;
+}
+
+.orbit-bullets li.has-thumb {
+    width: 100px;
+    height: 75px; }

@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------
+
+このファイルはSASSによって生成されています。
+このファイルに手を加える場合は、サイトマスターに確認し、
+.scssファイルからコンパイルし直してください。
+
+---------------------------------------------------------------*/
+
+
+//@import "normalize"; //初期化
+@import "common";
+@import "module/layout"; //レイアウト系
+@import "module/parts";
+@import "mixin/bourbon";//汎用Mixin
+@import "variables";//変数定義
+
+@import "//fonts.googleapis.com/css?family=Source+Sans+Pro";
+@import "../pfw/css/font-awesome/font-awesome.min.css";
+@import "//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italicc";
+
+* {
+	box-sizing: border-box;
+}
+body{
+	color: $clText;
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 1.5;
+	font-style: normal;
+	font-size: 16px;
+}
+
+@font-face {
+	font-family: 'Rmplus-bold';
+	src: url('/inc/fonts/Rmplus-bold.eot'); /* IE9 Compat Modes */
+	src: url('/inc/fonts/Rmplus-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('/inc/fonts/Rmplus-bold.woff') format('woff'), /* Modern Browsers */
+		url('/inc/fonts/Rmplus-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/inc/fonts/Rmplus-bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+h1,h2,h3,h4,h5{
+	margin-bottom: 20px;
+}
+
+
+
+
+
+

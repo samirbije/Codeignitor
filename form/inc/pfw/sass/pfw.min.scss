@@ -1,0 +1,21 @@
+/*!
+Phonogram Framework 1.0 min
+Copyright 2013 Phonogram Inc. All rights reserved.
+*/
+
+//pure Framework(min)
+@import "pure/0.3.0/pure.min.scss";
+
+//COMPASS関数
+@import "compass";
+
+//Phonogram original(min)
+@import "pfw/variables.scss";
+@import "pfw/mixins.scss";
+
+@import "pfw/mdl_button.scss";
+@import "pfw/mdl_form.scss";
+@import "pfw/mdl_image.scss";
+@import "pfw/mdl_navigation.scss";
+@import "pfw/mdl_tab.scss";
+@import "pfw/mdl_table.scss";

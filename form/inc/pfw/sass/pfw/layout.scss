@@ -1,0 +1,53 @@
+/* Phonogram Framework [layout] */
+
+
+//	PFWレイアウト
+//--------------------------------------------+
+
+#hnavi,#fnavi,#gnavi {
+	ul{
+		@include clearfix
+	}
+}
+
+.pure-g > div ,
+.pure-g-r > div {
+	@include box-sizing(border-box);
+}
+
+
+.l-box {
+    padding: 1.3em;
+}
+
+.l-vbox {
+    padding: 1.3em 0;
+}
+
+.l-hbox {
+    padding: 0 1.3em;
+}
+
+.l-centered {
+    text-align: center;
+}
+
+
+/*　可視化用(削除OK)*/
+
+$baseColor: #aaa;
+
+#main{
+	#sidebar{
+		background-color: $baseColor;
+	}
+	
+	#contents{
+		background-color: $baseColor + #111;
+	}
+}
+
+
+#sidebar,#contents{
+	padding: 10px;
+}

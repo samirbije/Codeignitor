@@ -1,0 +1,19 @@
+//-----------------------------------色
+
+//----------メインカラー
+$clMain:#1a4f8f;
+$clMain-l:desaturate(lighten($clMain, 51%), 30%) ;
+$clMain-ll:desaturate(lighten($clMain, 8%), 20%) ;
+
+//----------文字
+$clText:#333;
+
+//----------アクセントカラー
+$clPoint:#c99417;
+$clPoint-l:lighten($clPoint,4%) ;
+
+//----------白い背景
+$clBg:#f5f3ef;
+$clBg-l:lighten($clBg,4%) ;
+
+//-----------------------------------サイズ

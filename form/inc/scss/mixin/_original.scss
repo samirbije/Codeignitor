@@ -1,0 +1,194 @@
+/*
+* Description: サイドナビ
+* Project: 
+* Last Up Date: 2015.06
+* Author: Araya,morie
+*/
+
+$mediumDuration:0.1s;
+
+//ボタンホバー用アニメーシ
+@mixin radial-out {
+	position: relative;
+	overflow: hidden;
+	@include transition-property(color);
+	@include transition-duration($mediumDuration);
+
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $phonogram-red;
+		
+		@include transform(scaleY(0));
+		@include transform-origin(100% 100%);
+		@include transition-property(transform);
+		@include transition-duration($mediumDuration);
+		@include transition-timing-function(ease-out);
+	}
+
+	&:hover {
+		color: white;
+		&:after {
+			@include transform(scaleY(1));
+		}
+	}
+}
+
+//横幅を飛び立たせる場合に使用
+@mixin full-width{
+	margin-left: -500%;
+	margin-right: -500%;
+	padding-left: 500%;
+	padding-right: 500%;
+}
+
+//丸い背景のアイコン
+@mixin round-icon($code, $bgcolor:#d2d2d2, $size:22px, $before-or-after:before) {
+	&:#{$before-or-after} {
+		content: $code;
+		font-family: FontAwesome;
+		color: #fff;
+		background: $bgcolor;
+		border-radius: 50%;
+		line-height: $size;
+		width: $size;
+		text-align: center;
+		margin: 0 5px;
+		display: inline-block;
+	}
+}
+//透明度（IE8対策）
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacityIE: $opacity * 100;
+	filter: alpha(opacity=$opacityIE);
+}
+
+//アイコンが大きくなる（footerのソーシャル、トップへ戻るボタン）
+@mixin icon-grow {
+
+	&:before {
+		@include transition-duration($mediumDuration);
+		@include transition-timing-function(ease-in);
+		@include transform(scale(1) translateZ(0));
+	}
+
+	&:hover {
+		&:before {
+			@include transform(scale(1.3) translateZ(0));
+		}
+	}
+}
+
+@mixin fontSmooth() {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// 外部リンク
+@mixin blank() {
+	font-family: FontAwesome;
+	content: "\f08e";
+	font-size: 90%;
+	display: inline-block;
+}
+
+//トップのサムネイルアニメーション
+@mixin animation-thumbnail($width, $height, $caption-default-height){
+		width: $width;
+		height: $height;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid $border-color;
+		display: inline-block;
+		margin: 0;
+		figcaption{
+			padding: 0 20px;
+			position: absolute;
+			top: 0;
+			z-index: 500;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			@include opacity(0); //IE8対策
+			opacity: 1; //IE8対策
+			@include transition(transform .2s ease-out);
+			@include transform(translate3d(0,$height - $caption-default-height,0));
+
+			h4{
+				margin: 0;
+				height: $caption-default-height;
+				line-height: $caption-default-height;
+				&:after{
+					content: "";
+					display: block;
+					height: 1px;
+					width: 0%;
+					line-height: 1;
+					background-color: #fff;
+					@include transition(width .2s ease-out .2s);
+				}
+			}
+			p{
+				margin-top:  18.5px;
+			}
+		}
+		i{
+			color: #fff;
+			position: absolute;
+			font-size: 3em;
+			z-index: 502;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: -70px;
+			width: 1em;
+			@include transition(bottom .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) .2s);
+		}
+		img{
+			@include transition(transform .5s ease-out );
+		}
+		
+
+		//パネルホバー時
+		&:hover{
+			figcaption{
+				color: #fff;
+				background-color: desaturate($phonogram-red,5%);
+				@include opacity(0.9);
+				@include transform(translate3d(0,0,0));
+				padding-top: 60px;
+				h4:after{
+						width: 100%;
+				}
+			}
+			i{
+				bottom: 40px;
+			}
+			img{
+				@include transform(scale(1.1, 1.1));
+			}
+		}
+		a{
+			z-index: 501;
+			text-indent: 200%;
+			white-space: nowrap;
+			font-size: 0;
+			@include opacity(0);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		img{
+			max-width: $width;
+		}
+}

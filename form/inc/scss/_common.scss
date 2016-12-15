@@ -1,0 +1,66 @@
+@import "mixin/bourbon";//汎用Mixin
+@import "variables";//変数定義
+
+//------------------------------Mixin
+
+//----------背景
+// @mixin bg{
+// 	background-color: $clBg;
+// 	background-image: url(/inc/images/common/bg/bg_content.jpg);
+// }
+
+// @mixin bg-l{
+// 	background-color: $clBg-l;
+// 	background-image: url(/inc/images/common/bg/bg_content_l.jpg);
+// }
+
+//----------背景(アクセント)
+// @mixin bg-accent{
+// 	background-color: $clMain;
+// 	background-image: url(/inc/images/common/bg/bg_accent.jpg);
+// }
+
+// @mixin bg-accent-l{
+// 	background-color: $clMain-l;
+// 	background-image: url(/inc/images/common/bg/bg_accent_l.jpg);
+// }
+
+//角丸ゴシック
+@mixin fontR{
+	font-family: "Rmplus-bold","メイリオ","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	
+	font-weight: normal!important;
+	text-shadow: 0px 0px 1px rgba($clText, 0.1);
+	-moz-osx-font-smoothing: grayscale;
+}
+
+//普通のフォント
+@mixin fontN{
+	font-family: "メイリオ","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+
+	text-shadow: none;
+	-moz-osx-font-smoothing: none;
+}
+
+
+//----------1カラムのページ用
+
+.page_wrap {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+//------------------------------セクション
+
+// #main section{
+// 	@include clearfix;
+// 	@include bg;
+	
+// 	&:nth-child(2n){
+// 		@include bg-l;
+// 	}
+	
+// 	&.bg-accent{
+// 		@include bg-accent;
+// 	}
+// }

@@ -1,0 +1,56 @@
+/* Phonogram Framework [base] */
+
+
+//  PFWエレメント
+//--------------------------------------------+
+
+
+body{
+    color: $gray;
+    font-size: 96%;
+}
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font-family: "メイリオ",Meiryo,Helvetica Neue,Helvetica,Arial,Osaka;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $grayDark;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1.125em;
+}
+
+p{
+    line-height: 1.5em;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+    
+    :visited {
+        color: #265778;
+    }
+
+    :hover{
+        color: $linkColorHover;
+        text-decoration: underline;
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 10px 0;
+}

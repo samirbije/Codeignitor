@@ -1,0 +1,29 @@
+/* Phonogram Framework [common] */
+
+
+//  PFW汎用
+//--------------------------------------------+
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.pfw_taL { text-align: left;}
+.pfw_taC { text-align: center;}
+.pfw_taR { text-align: right;}
+
+.pfw_indent {
+    padding: 0 0 0 1em;
+    text-indent: -1em;
+    @include inline-block
+}
+
+.clearfix {
+    @include clearfix
+}
+
+/* Hides from IE-mac */
+* html .clearfix { height: 1%; }

@@ -1,0 +1,122 @@
+@import "../mixin/bourbon";//汎用Mixin
+@import "../variables";//変数定義
+
+/*------------------------------
+レイアウト定義
+------------------------------*/
+
+#container {
+	position: relative;
+}
+.content-inner{
+	width: 1024px;
+	margin: auto;
+}
+
+//----------------------------------ヘッダー
+
+#header{
+	height: 105px;
+	padding-top: 30px;
+	@include clearfix;
+	position: relative;
+	z-index: 10;
+	padding-left: 5%;
+
+	#logo{
+		float: left;
+		img {
+			width: 110px;
+			height: auto;
+		}
+	}
+	#gnavi li {
+		a {
+			color: $clText;
+			font-weight: bold;
+		}
+		&.current a {
+			color: $clMain-ll;
+		}
+	}
+}
+
+//----------------------------------ナビ
+
+#gnavi{
+	float: left;
+	
+	li{
+		@include inline-block;
+		margin-right: 10px;
+	}
+}
+
+//----------------------------------ページトップ
+#totop {
+	text-align: center;
+	a {
+		border: 3px solid #666;
+		padding: 4px 7px;
+		border-radius: 50%;
+		width: 48px;
+		color: #000;
+	}
+}
+
+
+
+//----------------------------------フッター
+
+#footer{
+	padding-top: 40px;
+	@include clearfix;
+	
+	a{
+		color: #8c8c8c;
+	}
+	
+	.footer-left{
+		float: left;
+		.logo img {
+			width: 340px;
+			height: auto;
+		}
+	}
+	
+	.footer-right{
+		float: right;
+	}
+	.content-inner ul {
+		margin: 4px 0;
+		li {
+			font-size: 76%;
+			float: right;
+			padding-right: 0.5em;
+			a {
+			}
+			&:after {
+				content: "|";
+				padding-left: 0.5em;
+			}
+			&:first-child:after {
+				display: none;
+			}
+		}
+	}
+	.footer-copyright{
+		text-align: right;
+		@include clearfix;
+		
+		ul {
+			@include inline-block;
+			li{
+				@include inline-block;
+			}
+		}
+		
+		a{
+			color: $clText;
+		}
+	}
+}

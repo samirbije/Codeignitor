@@ -1,0 +1,126 @@
+
+
+
+
+//--------------------見出し
+
+
+
+
+//--------------------段落
+
+
+
+
+//--------------------リスト
+
+
+
+//--------------------ラベル
+
+
+
+//--------------------文字
+
+
+
+//--------------------グリッド
+
+
+
+//--------------------テーブル
+table.tbl_style {
+	width: 100%;
+	th {
+		text-align: left;
+		width: 40%;
+		text-align: center;
+		vertical-align: middle;
+		background: $clMain;
+		color: #fff;
+	}
+	th,td {
+		border: 1px solid #e5e5e5;
+		padding: 16px;
+	}
+}
+
+//--------------------画像
+
+//--------------------お問い合わせボックス
+
+
+//--------------------ステップ(横向き)
+
+
+
+//--------------------各種許可証・登録番号
+//--------------------ボタン
+.btn_area {
+	padding: 30px 0;
+	&.center {
+		text-align: center;
+	}
+}
+.btn {
+	padding: 15px 30px;
+	font-weight: bold;
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background: #eee;
+	border: 2px solid #eee;
+	color: #000!important;
+	display: inline-block;
+	&:hover {
+		background: $clText;
+		color: #fff!important;
+	}
+	&.point{
+		color: #fff!important;
+		border: 2px solid $clMain;
+		background: $clMain;
+		&:hover {
+			color: $clMain!important;
+			background: #fff;
+		}
+	}
+	&.small {
+		padding: 8px 30px;
+		font-size: 90%;
+		background: #f1f1f1;
+		&:hover {
+			background: $clText;
+		}
+	}
+}
+
+//----------ニュース
+dl.side_by_side {
+	@include clearfix;
+	dt {
+		width: 225px;
+		float: left;
+		padding: 6px;
+	}
+	dd {
+		margin-left: 225px;
+		text-align: left;
+		padding: 6px;
+	}
+}
+
+.category {
+	text-align: center;
+	background: #ccc;
+	padding: 3px;
+	font-size: 75%;
+	width: 100px;
+	display: inline-block;
+	color: #fff;
+	margin: 0 .6em;
+	&.press {
+		background: #7dbcda;
+	}
+	&.news {
+		background: #266bab;
+	}
+}

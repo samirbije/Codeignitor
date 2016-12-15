@@ -1,0 +1,79 @@
+@import "../mixin/bourbon";//汎用Mixin
+@import "../variables";//変数定義
+@import "../common";//変数定義
+
+/*------------------------------
+トップ
+------------------------------*/
+//----------共通
+.box_left, .box_right {
+	width: 50%;
+	background: rgba(255,255,255,0.7);
+	padding: 45px 5%;
+	height: 644px;
+}
+.box_right {
+	float: right;
+}
+
+//----------スライダー & ニュースバナー
+.slider {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+
+	.newsBanner {
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.1);
+		width: 100%;
+		padding: 0 5%;
+		height: 37px;
+		.news_title, .side_by_side {
+			display: inline-block;
+			margin: 0;
+		}
+		.news_title {
+			padding: 6px;
+			font-family: 'Lora', serif;
+			font-size: 110%;
+			font-weight: bold;
+		}
+	}
+}
+
+//----------コンテンツ
+h2 {
+	margin-top: 130px;
+	font-family: 'Lora', serif;
+	font-weight: 600;
+	font-size: 340%;
+}
+h3 {
+	font-size: 140%;
+}
+section {
+	background: url(/inc/images/common/top/bg_company.jpg) 0 -1px no-repeat;
+	background-size: cover;
+	@include clearfix;
+	p {
+		font-weight: 600;
+	}
+}
+//----------COMPANY
+.companyArea {
+	margin-top: 543px;
+}
+
+//----------BUSINESS
+.businessArea {
+}
+
+//----------NEWS
+.newsArea {
+	text-align: center;
+	h2 {
+		margin-top: 60px;
+	}
+}
